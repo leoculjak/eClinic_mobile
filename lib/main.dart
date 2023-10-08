@@ -1,4 +1,4 @@
-import 'package:eclinic_mobile/pages/my_home_page.dart';
+import 'package:eclinic_mobile/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,11 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'eClinic',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black12),
         useMaterial3: true,
       ),
-      home: MyHomePage(),
+      home: const LoginPage(),
     );
   }
 }

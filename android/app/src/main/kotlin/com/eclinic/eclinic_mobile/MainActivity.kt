@@ -1,4 +1,4 @@
-package com.eclinic.eclinic_mobile
+package com.eclinic.eclinic.mobile
 
 import io.flutter.embedding.android.FlutterActivity
 
