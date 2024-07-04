@@ -1,4 +1,5 @@
 import 'package:eclinic_mobile/pages/login_page.dart';
+import 'package:eclinic_mobile/pages/news_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,9 +16,18 @@ class MyApp extends StatelessWidget {
       title: 'eClinic',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        useMaterial3: true,
-      ),
+          useMaterial3: true,
+          brightness: Brightness.dark,
+          primaryColor: const Color(0xFF1E293B),
+          scaffoldBackgroundColor: const Color(0xFF293545),
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Color(0xFF1E293B),
+          )),
       home: const LoginPage(),
+      routes: {
+        '/login': (context) => const LoginPage(),
+        '/news': (context) => const NewsPage(),
+      },
     );
   }
 }
