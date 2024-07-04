@@ -35,7 +35,8 @@ class _LoginPageState extends State<LoginPage> {
         onPressed: () async {
           print("button pressed");
           // _showAlertDialog("show text");
-          await provider.tryToLogin();
+          // await provider.tryToLogin();
+          Navigator.pushNamed(context, '/news');
         },
         child: Text(
           text,
