@@ -1,11 +1,11 @@
 import 'package:flutter_appauth/flutter_appauth.dart';
 
 class IdentityConfiguration {
-  static String issuer = 'https://d6c5-93-180-97-125.ngrok-free.app';
+  static String issuer = 'https://hog-resolved-poorly.ngrok-free.app';
   static String redirectUrl = 'com.eclinic.eclinic.mobile://callback';
   static String discoveryUrl = '$issuer/.well-known/openid-configuration';
   static String clientId = 'com.eclinic.eclinic.mobile';
-  static List<String> scopes = <String>['openid', 'profile'];
+  static List<String> scopes = <String>['openid', 'profile', 'api1'];
 }
 
 class AccountProvider {
@@ -19,7 +19,7 @@ class AccountProvider {
     endSessionEndpoint: '${IdentityConfiguration.issuer}/connect/endsession',
   );
 
-  AccountProvider() {}
+  AccountProvider();
 
   Future<void> tryToLogin() async {
     try {
